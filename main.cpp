@@ -15,9 +15,6 @@
 #include <vector>
 using namespace std;
 
-// 46
-//
-
 // 45
 // C_MM12-易: 相遇時間計算
 /*int main()
@@ -177,14 +174,12 @@ int main()
     for(int i=0;i<10;i++)
     {
         cout << fixed << setprecision(0) << in[i];
-        //printf("%.0f",in[i]);
         if(i<9)
             cout << " ";
         else
             cout << "\n";
     }
     cout << "Median:" << fixed << setprecision(2) << (in[4]+in[5])/2 << "\n";
-    //printf("Median:%.2f\n",(in[4]+in[5])/2);
 }*/
 
 // 33
@@ -224,55 +219,6 @@ int main()
     }
     
     cout << fixed << setprecision(2) << ans/n << "\n";
-}*/
-
-/*int main(void)
-{
-    int n;
-    scanf("%d",&n);
-    
-    for(int i=0;i<n;i++)
-    {
-        int tmp;
-        scanf("%d",&tmp);
-        
-        if(tmp>=9999)
-            printf("Failure Input\n");
-        else
-        {
-            int arr[4]={0},num[4]={1000,100,10,1},num2[10]={0},max=0;
-            for(int j=0;j<4;j++)
-            {
-                arr[j]=tmp/num[j];
-                tmp-=((tmp/num[j])*num[j]);
-                num2[arr[j]]++;
-                
-                if(num2[arr[j]]>max)
-                    max=num2[arr[j]];
-            }
-            int c=0;
-            if(max==3 || max==1 || max==4)
-                printf("NO\n");
-            else
-            {
-                for(int j=0;j<10;j++)
-                {
-                    if(num2[i]==2)
-                    {
-                        c++;
-                        if(c>=2)
-                            break;
-                    }
-                }
-                
-                if(c>=2)
-                    printf("NO\n");
-                else
-                    printf("YES\n");
-            }
-            
-        }
-    }
 }*/
 
 // 31
@@ -328,13 +274,6 @@ int main(void)
     }
 }*/
 
-/*int main(void)
-{
-    char in[1000];
-    fgets(in,999,stdin);
-        printf("There are %lu characters\n",strlen(in)-1);
-}*/
-
 // 29
 // C_AR44: 迴文問題
 /*int main(void)
@@ -359,37 +298,6 @@ int main(void)
     else
         cout << "YES\n";
     
-}*/
-
-// nah
-/*int main(void)
-{
-    int arr[127]={0};
-    char in;*/
-    
-    /*do
-    {
-        in=getchar();
-        
-        if(in != '\n')
-        {
-            arr[in]++;
-        }
-    }while(in != '\n');*/
-    
-    /*while(1)
-    {
-        scanf("%c",&in);
-        if(in == '\n')
-            break;
-        arr[in]++;
-    }
-    
-    for(int i=126;i>=0;i--)
-    {
-        if(arr[i]!=0)
-            printf("%d %d\n",i,arr[i]);
-    }
 }*/
 
 // 27
@@ -491,36 +399,6 @@ int main(void)
     
     if(ans==0)
         cout << "1\n";
-}*/
-
-// nah
-/*int main(void)
-{
-    char n0[5][6]={"*****","*   *","*   *","*   *","*****"};
-    char n1[5][6]={"*","*","*","*","*"};
-    char n2[5][6]={"*****","    *","*****","*","*****"};
-    char n3[5][6]={"*****","    *","*****","    *","*****"};
-    char n4[5][6]={"*   *","*   *","*****","    *","    *"};
-    char n5[5][6]={"*****","*","*****","    *","*****"};
-    char n6[5][6]={"*****","*","*****","*   *","*****"};
-    char n7[5][6]={"*****","    *","    *","    *","    *"};
-    char n8[5][6]={"*****","*   *","*****","*   *","*****"};
-    char n9[5][6]={"*****","*   *","*****","    *","    *"};
-    
-    char num[10][5][6]={{"*****","*   *","*   *","*   *","*****"},{"*","*","*","*","*"},{"*****"," *","*****","*","*****"},{"*****","    *","*****"," *","*****"},{"*   *","*   *","*****","    *","    *"},{"*****","*","*****","    *","*****"},{"*****","*    ","*****","*   *","*****"},{"*****","    *","    *","    *","    *"},{"*****","*   *","*****","*   *","*****"},{"*****","*   *","*****","    *","    *"}};
-    
-    int in[4];
-    scanf("%1d%1d%1d%1d",&in[0],&in[1],&in[2],&in[3]);
-    for(int i=0;i<5;i++)
-    {
-        printf("%s ",num[in[0]][i]);
-        printf("%s ",num[in[1]][i]);
-        printf("%s ",num[in[2]][i]);
-        printf("%s ",num[in[3]][i]);
-        
-        printf("\n");
-    }
-    
 }*/
 
 // 24
@@ -750,48 +628,6 @@ int main(void)
     
 }*/
 
-// nah
-/*int main(void)
-{
-    int n;
-    scanf("%d",&n);
-    getchar();
-    char in;
-    for(int i=0;i<n;i++)
-    {
-        int ans=0;
-        while(1)
-        {
-            in=getchar();
-            if(in=='\n')
-                break;
-            else
-                ans+=in;
-        }
-        printf("%d\n",ans);
-    }
-}*/
-
-// nah
-/*float func(int n,float r,int p)
-{
-    if(n==1)
-        return p*(1+r);
-        //return 10000*1.001;
-    return (func(n-1,r,p)+p)*(1+r);
-    //return (func(n-1)+10000)*1.001;
-}
-
-int main(void)
-{
-    int n,p;
-    float r;
-    scanf("%f",&r);
-    scanf("%d",&n);
-    scanf("%d",&p);
-    printf("%.0f\n",floor(func(n,r,p)));
-}*/
-
 // 18
 // 基礎題目23： 找零錢問題
 /*int main(void)
@@ -813,28 +649,6 @@ int main(void)
         ans3=re;
         cout << ans3 << "," << ans2 << "," << ans1 << "\n";
     }
-}*/
-
-//nah
-/*int main(void)
-{
-    int N;
-    for(int i=0;i<N;i++)
-    {
-        char in1[31]={0},in2[31]={0};
-        int sum[30]={0};
-        
-        scanf("%s %s",in1,in2);
-        
-        unsigned long len1=strlen(in1),len2=strlen(in2);
-        
-        for(int j=0;j<len;j++)
-        {
-            (double)
-        }
-        
-    }
-    
 }*/
 
 // 17
@@ -1351,4 +1165,3 @@ int main(void)
     cout << in[0]*in[0]*in[0]+in[1]*in[1]*in[1]+in[2]*in[2]*in[2]+in[3]*in[3]*in[3]+in[4]*in[4]*in[4]+in[5]*in[5]*in[5] << "\n";
     
 }*/
-
